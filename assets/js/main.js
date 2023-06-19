@@ -205,6 +205,8 @@ function productsStorage(){
     localStorage.setItem("car", JSON.stringify(carProducts))
 }
 
+//*Incrementar y decrementar elementos del carrito
+
 function IncreseProducts(event){
 
     if(event.target.classList.contains('plus__product')){
@@ -215,8 +217,12 @@ function IncreseProducts(event){
                 
                 if(product.id===productId){
 
+                    
+
                     product.quantity++;
                     return product;
+                    
+                   
                        
 
                 }
@@ -233,12 +239,12 @@ function IncreseProducts(event){
 
    }
 
-   console.log("hola peru")
+ 
 
    carElementsHTML();   
 }
 
-//*Incrementar y decrementar elementos del carrito
+
 
 function DecreceProducts(event){
 
@@ -250,13 +256,13 @@ function DecreceProducts(event){
                 
                 if(product.id===productId){
 
+                    if(product.quantity>0)
+                    {
                     product.quantity--;
-                                 
-                  
                     return product;
-
-
-                       
+                    } 
+                    
+                    else {return product}
 
                 }
                 else {return product;}
@@ -265,7 +271,6 @@ function DecreceProducts(event){
           
             carProducts=[...product_actual]
             
-            
         }
 
         
@@ -273,7 +278,7 @@ function DecreceProducts(event){
 
    }
 
-   console.log("hola peru cesar")
+ 
 
    carElementsHTML();   
 }
@@ -337,9 +342,33 @@ function modalHTML() {
                     <h2>$${element.price}</h2>
                     <h4>Stock disponible: ${element.stock}</h4>
                     <h4>Colores:</h4>
-                    <img src="${element.image}">
+                    <div class="color_product">
+                        <img src="${element.image}">
+
+                        <div class="color_element">
+
+                            <h4 class="color"></h4>
+                            <h4 class="color"></h4>
+                            <h4 class="color"></h4>
+                            <h4 class="color"></h4>
+                                                       
+
+                        </div>
+
+                    </div>
                     <h4>Descripción:</h4>
                     <p>${element.description}</p>
+                    <h4>Sizes:</h4>
+                    <div class="sizes_product">
+
+                        <div class="sizes">S</div>
+                        <div class="sizes">M</div>
+                        <div class="sizes">L</div>
+                        <div class="sizes">XL</div>
+
+                    </div>
+
+                    
                 </div>
                 <div class="modal__info--second">
                     <img src="${element.image}">

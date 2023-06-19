@@ -14,6 +14,7 @@
 }
 body {
     font-family: 'Oswald', sans-serif;
+    background-color: antiquewhite;
 }
 /** Nav */
 .nav {
@@ -42,7 +43,9 @@ body {
 }
 /** Desplegable carrito */
 .nav__car {
-    background-color: var(--light_grey);
+    border: solid gray;
+    border-radius: 10px;
+    background-color: rgb(233, 227, 227);
     height: 90vh;
     width: 40%;
     position: fixed;
@@ -79,6 +82,7 @@ body {
 .car__product__image {
     display: flex;
     justify-content: center;
+    
 }
 .car__product__image img {
     max-width: 150px;
@@ -239,7 +243,7 @@ body {
 }
 /** Modal */
 .modal {
-    background-color: var(--white);
+    background-color: rgb(233, 227, 227);
     border-radius: 20px;
     width: 85%;
     max-width: 1000px;
@@ -263,7 +267,66 @@ body {
 .modal__icon:hover {
     transform: scale(1.3);
 }
+
+.color_product{
+    display: flex;
+
+    gap:30px
+}
+.color{
+    width:25px;
+    height:25px;
+    border: solid black;
+    
+    
+}
+
+.color_element{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    
+    
+
+}
+
+.color:nth-child(1){
+    background-color: red;
+}
+.color:nth-child(2){
+    background-color: white;
+}
+.color:nth-child(3){
+    background-color: blue;
+}
+.color:nth-child(4){
+    background-color: black;
+}
+
+.sizes_product{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:25px;
+    
+}
+
+
+.sizes{
+
+    border-radius: 5px;
+    border: solid black;
+    text-align: center;
+    
+    width:70px;
+    padding: 5px;
+
+
+}
+
 /* Clase muestra modal */
+
 .show__modal {
     display: block;
 }
@@ -273,9 +336,11 @@ body {
 }
 .modal__info {
     display: flex;
+    
 }
 .modal__info--first {
     color: var(--grey);
+  
 }
 .modal__info--first img {
     max-width: 120px;
@@ -283,7 +348,8 @@ body {
 }
 .modal__info--first h3 {
     font-size: 22px;
-    margin-bottom: 10px;
+    margin-bottom: 
+    10px;
     font-weight: 400;
 }
 .modal__info--first h2 {
@@ -291,7 +357,7 @@ body {
     margin-bottom: 10px;
 }
 .modal__info--first h4:nth-child(3) {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 .modal__info--first h4:nth-child(4), h4:nth-child(6) {
     margin-bottom: 10px;
